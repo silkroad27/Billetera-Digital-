@@ -1,2 +1,7 @@
-# Billetera-Digital-
-Junto a mi equipo del curso de Finanzas e Ingeniería Económica que te ayuda a realizar un futuro cálculo sobre tus ahorros utilizando tasas nominales.
+# Financial-Website
+Web Financiera de MiVivienda: Elige entre 18 viviendas, genera un cronograma de pagos y gestiona usuarios mediante inicio de sesión.
+
+# Instalation
+npm install
+
+Luego Descarga el manual, el cual esta dentro del repositorio principal

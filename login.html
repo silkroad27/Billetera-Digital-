@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="login.css">
+    <title>signin-signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <h2 class="title">Iniciar Sesion</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="usuario-iniciar"type="text" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input id="password-iniciar" type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p id="aviso-registro" class="social-text"></p>
+                <p class="social-text">O inicia sesion con tus redes sociales</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="account-text">No tienes una cuenta? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Registrate</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="usuario-registrar" type="text" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input id="email-registrar"type="text" placeholder="Correo">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input id="password-registrar"type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p id="aviso-error"class="social-text">O inicia sesion con tus redes sociales</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p id="aviso-registro" class="social-text"></p>
+                <p class="account-text">Ya tienes una cuenta? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Eres Miembro?</h3>
+                    <p>Que esperas para iniciar sesion!</p>
+                    <button class="btn" id="sign-in-btn">Inicia sesion</button>
+                </div>
+                <img src="signin.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Eres nuevo?</h3>
+                    <p>Que esperas para registrarte!</p>
+                    <button class="btn" id="sign-up-btn">Registrate</button>
+                </div>
+                <img src="signup.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+    <script src="./script_login.js"></script>
+</body>
+</html>

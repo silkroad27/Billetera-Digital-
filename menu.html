@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Responsive Admin Dashboard using HTML, CSS & JavaScript</title>
+    <!-- MATERIAL ICONS CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- GOOGLE FONTS (POPPINS)-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./styles_finance.css">
+    <link rel="icon" href="http://127.0.0.1/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://127.0.0.1/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>  
+<body>
+    <nav>
+        <div class="container">
+            <a href="/app_finance/app_finance.html">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+                <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"/>
+                <polygon points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"/>
+            </svg>
+            </a>                   
+          
+          <div class="profile-area">
+            <div class="theme-btn">
+              <li class="navbar-logo flexbox-left">
+                <a class="navbar-item-inner flexbox">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+                    <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"/>
+                    <polygon points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"/>
+                </svg>
+                </a>
+            </li>              
+            </div>
+            <div class="profile">
+              <div class="profile-photo-main">
+                <img src="./images/profile-default.jpg">
+              </div>
+              <h5></h5>
+            </div>
+            <button id="menu-btn">                
+              </button>
+          </div>
+        </div>
+      </nav>
+      
+    <!-- END OF NAVBAR-->
+
+    <main>
+        <aside>
+            <button id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person</span>
+                    <h4>Profile</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">shield</span>
+                    <h4>Security</h4>
+                </a>
+                <a class="logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h4>Logout</h4>
+                </a>
+            </div>
+            <!-- END OF SIDEBAR -->
+        </aside>
+        <!-------------------- END OF ASIDE ----------------------->        
+        <section class="middle">
+            <br><br><br>
+            <div class="container-carousel">
+                <div id="slide">                  
+                </div>                                        
+                    <div class="buttons">
+                        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+                        
+                    </div>
+                </div>
+            </div>                          
+            <script>
+                //carrousel
+                document.getElementById('next').onclick = function(){
+                let lists = document.querySelectorAll('.item');
+                document.getElementById('slide').appendChild(lists[0]);
+                }
+                document.getElementById('prev').onclick = function(){
+                let lists = document.querySelectorAll('.item');
+                document.getElementById('slide').prepend(lists[lists.length - 1]);
+                }   
+            </script>
+            <!-------------------- Inicio del Formulario ----------------------->     
+            <h1 id="header1">Crea una nueva cuenta aquí</h1>
+            <form>
+              
+              <div id="formulario-Nueva-Cuenta">
+                <div class="mb-3">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Moneda
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="btnMonedaSol"class="dropdown-item" href="#formulario-Nueva-Cuenta">Soles</a></li>                    
+                      <li><a id="btnMonedaDolar" class="dropdown-item" href="#formulario-Nueva-Cuenta">Dólares</a></li>                    
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-3">    
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">                    
+                    Tasa
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="btnTasaNominal" class="dropdown-item" href="#formulario-Nueva-Cuenta">Nominal</a></li>                    
+                      <li><a id="btnTasaEfectiva" class="dropdown-item" href="#formulario-Nueva-Cuenta">Efectiva</a></li>                   
+                    </ul>
+                  </div>
+                </div>              
+                <div class="mb-3">                
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Periodo de la tasa
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="periodoTasaDiario"class="dropdown-item" href="#formulario-Nueva-Cuenta">Diaria</a></li>                    
+                      <li><a id="periodoTasaQuincenal"class="dropdown-item" href="#formulario-Nueva-Cuenta">Quincenal</a></li>                    
+                      <li><a id="periodoTasaMensual"class="dropdown-item" href="#formulario-Nueva-Cuenta">Mensual</a></li>
+                      <li><a id="periodoTasaBimestral"class="dropdown-item" href="#formulario-Nueva-Cuenta">Bimestral</a></li>                    
+                      <li><a id="periodoTasaTrimestral"class="dropdown-item" href="#formulario-Nueva-Cuenta">Trimestral</a></li>
+                      <li><a id="periodoTasaSemestral"class="dropdown-item" href="#formulario-Nueva-Cuenta">Semestral</a></li>
+                      <li><a id="periodoTasaAnual"class="dropdown-item" href="#formulario-Nueva-Cuenta">Anual</a></li>
+                    </ul>
+                  </div>
+                </div>                     
+              </div>
+              <div id="input-formulario">
+                <div class="mb-3">
+                  <label for="exampleInputEmail" class="form-label">Porcentaje</label>
+                  <input id="input-porcentaje" class="form-control" >
+                </div>           
+                <div class="mb-3">
+                  <label for="exampleInputEmail" class="form-label">Monto Inicial</label>
+                  <input id="input-monto-inicial"  class="form-control" >
+                </div>                                         
+                         
+              </div>
+              <div id="confirmacion-Nueva-Cuenta">
+                <!--Inicio de la carta-->
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img id="cuenta-nueva-img" src="../images/cuenta_nueva.jpg" class="img-fluid rounded-start" alt="../images/dollar.jpg">
+                      <div id="aviso" for="aviso"></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div id="confirmaciones"class="card-body">
+                        <h5 class="card-title">Cuenta Nueva</h5>                        
+                        <p id="confirmacion"class="card-text">Deseo una cuenta...</p>
+                        <p id="envolvente-confrm1"> </p>
+                        <p id="envolvente-confrm2"> </p>
+                        <p id="envolvente-confrm3"> </p>
+                        <p id="envolvente-confrm4"> </p>
+                        <p id="envolvente-confrm5"> </p>
+                        <p id="envolvente-confrm6"> </p>       
+                        <div id="id-boton-form"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Fin de la carta-->
+              </div>
+            </form>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>      
+          
+        <!-- END OF RIGHT -->
+    </main>
+    <!--================== END OF ASIDE =====================-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script_finance.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

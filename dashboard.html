@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+            <a class="navbar-item-inner flexbox">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+                <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"/>
+                <polygon points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"/>
+            </svg>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a id="referenciaHome" href="#" class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="home-outline"></ion-icon>
+            </div>
+            <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a href="../login/login.html" class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+                <ion-icon name="settings-outline"></ion-icon>
+            </div>
+            <span class="link-text">Salir</span>
+            </a>
+        </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <h7>Información</h7>
+                <form>                    
+                    <div id="Descripcion-Cuenta" class="form-group">                        
+
+                    </div>
+                    <div class="form-group">
+                        <label for="tasa">Tasa</label>
+                        <label id="Descripcion-Tasa"></label>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="monto">Monto</label>
+                        <label id="Descripcion-monto"></label>
+                    </div>                    
+                    <div id="img-cuenta" class="form-group">
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="box">
+                <h7>Nueva Tasa</h7>
+                <form>                    
+                    <div class="form-group">
+                        <label for="tipo-tasa">Tipo de Tasa</label>
+                        <select id="tipo-tasa-nueva" name="tipo-tasa">
+                            <option id="btnTasaNominal"value="tasaNominal">Nominal</option>
+                            <option id="btnTasaEfectiva"value="tasaEfectiva">Efectiva</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="periodo">Periodo</label>
+                        <select id="periodo-tasa-nueva" name="periodo">
+                            <option id="periodoCalculoDiario"value="tasaDiaria">Diaria</option>
+                            <option id="periodoCalculoQuincenal"value="tasaQuincenal">Quincenal</option>
+                            <option id="periodoCalculoMensual"value="tasaMensual">Mensual</option>
+                            <option id="periodoCalculoBimestral"value="tasaBimestral">Bimestral</option>
+                            <option id="periodoCalculoTrimestral"value="tasaTrimestral">Trimestral</option>
+                            <option id="periodoCalculoSemestral"value="tasaSemestral">Semestral</option>
+                            <option id="periodoCalculoAnual"value="anual">Anual</option>
+                        </select>
+                    </div>
+                    <div id="nueva-capitalizacion" class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="tasa">Tasa</label>
+                        <input type="text" id="input-nueva-tasa" name="tasa">
+                    </div>                    
+                    <div id="id-boton-form"class="form-group">
+                        
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <h7>Estimación de cuenta en el tiempo</h7>
+                <form>
+                    <div class="form-group">
+                        <label for="tipo-tasa-estimacion">Tipo de Tasa</label>
+                        <select id="tipo-tasa-estimacion" name="tipo-tasa-estimacion">
+                            <option id="calculoTasaNominal"value="tasaNominal">Nominal</option>
+                            <option id="calculoTasaEfectiva"value="tasaEfectiva">Efectiva</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="periodo-estimacion">Periodo de la Tasa</label>
+                        <select id="periodo-estimacion" name="periodo-estimacion">
+                            <option id="periodoTasaDiario"value="tasaDiaria">Diaria</option>
+                            <option id="periodoTasaQuincenal"value="tasaQuincenal">Quincenal</option>
+                            <option id="periodoTasaMensual"value="tasaMensual">Mensual</option>
+                            <option id="periodoTasaBimestral"value="tasaBimestral">Bimestral</option>
+                            <option id="periodoTasaTrimestral"value="tasaTrimestral">Trimestral</option>
+                            <option id="periodoTasaSemestral"value="tasaSemestral">Semestral</option>
+                            <option id="periodoTasaAnual"value="tasaAnual">Anual</option>
+                        </select>
+                    </div>
+                    <div id="estimacion-capitalizacion" class="form-group">
+                        
+                    </div>
+                    <div id="input-porcentaje-calculo"class="form-group">
+                        <label for="tasa-estimacion">Tasa</label>
+                        <input type="text" id="tasa-estimacion" name="tasa-estimacion">
+                    </div>
+                    <div id="input-dias-calculo"class="form-group">
+                        <label for="tiempo-dias">Tiempo en días</label>
+                        <input type="text" id="tiempo-dias" name="tiempo-dias">
+                    </div>
+                    <div id="calculo-monto-nuevo"class="form-group">
+                        <label for="tiempo-dias"></label>                        
+                    </div>
+                </form>
+            </div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <script src="/Frontend/dashboard/dashboard.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
